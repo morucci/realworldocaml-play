@@ -1,2 +1,4 @@
 _build
 *.cm[oi]
+.merlin
+a.out

@@ -1,0 +1,26 @@
+opam switch default
+eval $(opam env)
+
+dune build -w sum.exe
+
+in vscode
+=========
+
+opam install ocaml-lsp
+opam install ocamllformat
+touch .ocamlformat
+
+ext install ocamllabs.ocaml-platform
+
+Conf:
+		"files.associations": {
+			"*.ml": "ocaml",
+			"*.mli": "ocaml"
+		},
+		"json.schemas": [],
+		"ocaml.sandbox": {
+			"kind": "opam",
+			"switch": "default"
+		},
+		"editor.formatOnSave": true,
+	}
